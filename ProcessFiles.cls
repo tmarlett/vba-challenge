@@ -19,7 +19,7 @@ For i = 2 To Cells(Rows.Count, 1).End(xlUp).Row Step 1
                 Cells(j, 11) = Cells(j, 11) + Cells(i, 7)
                 'Update Change at end of Year
                 Cells(j, 9) = Cells(i, 6) - Cells(j, 12)
-                If Cells(j, 9) >= 1 Then
+                If Cells(j, 9) >= 0 Then
                     Cells(j, 9).Interior.ColorIndex = 4
                 Else
                     Cells(j, 9).Interior.ColorIndex = 3
@@ -48,5 +48,6 @@ For i = 2 To Cells(Rows.Count, 1).End(xlUp).Row Step 1
         Next j
     Next i
 End Sub
+
 
 
